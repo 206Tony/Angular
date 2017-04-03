@@ -51,7 +51,7 @@
             ]
         };
         
-        Fixtures.getAlbum= function() {
+        Fixtures.getAlbum = function() {
             return albumPicasso;
     };
          
