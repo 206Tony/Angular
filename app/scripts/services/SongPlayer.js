@@ -87,6 +87,12 @@
 */
         SongPlayer.currentTime = null;
         
+/*
+* @desc Volume used for songs
+* @type {Number}
+*/
+        SongPlayer.volume = 80;
+        
 /**
 * @function play
 * @desc Play current or new song
@@ -162,8 +168,20 @@
             }
         };
         
+/**
+* @function setVolume
+* @desc Set current volume songs
+* @param {Number} volume
+*/
+        SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+            }
+            SongPlayer.volume = volume; 
+        };
+        
         return SongPlayer;
-    }
+    };
     
     angular
         .module('blocJams')
