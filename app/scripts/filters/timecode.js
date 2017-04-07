@@ -26,5 +26,5 @@
     
     angular
         .module('blocJams')
-        .filters('timecode', timecode);
+        .filter('timecode', timecode);
 })();
